@@ -1,150 +1,87 @@
-![Python](https://miro.medium.com/max/1400/1*HacaJfdu7HF8V4gIoA98ww.png)
+# Introduction to Python Course
 
-![Python](https://forthebadge.com/images/badges/built-by-developers.svg) ![Python](https://forthebadge.com/images/badges/built-with-love.svg) ![Python](https://forthebadge.com/images/badges/for-you.svg) ![Python](https://forthebadge.com/images/badges/made-with-python.svg) ![Python](https://forthebadge.com/images/badges/makes-people-smile.svg) ![Python](https://forthebadge.com/images/badges/uses-git.svg) ![Python](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)
+A static, browser-based collection of eight introductory Python slide decks
+with a legacy Dialogflow/API.AI chatbot shell on the landing page.
 
-# Introduction to Python Programming language
+**Published site:** <https://khlaifiabilel.github.io/python-course/>
 
-> What is Python ?
+## Course material
 
-> How To Setup On Linux
+The exported HTML decks cover a progression from programming and Python basics
+through practical language topics. Open `index.html` to reach classes 1 through
+8, or open any `Python courseNN.html` file directly.
 
-> Python courses
+This repository contains presentation material, not an installable Python
+package. `requirements.txt` is empty, and no Python interpreter or package
+installation is needed to view the lessons.
 
-> Intelligent assistant to learn Python
+## Run locally
 
-## What is Python ?
+Some pages load fonts, images, jQuery, or other assets from external hosts, so
+serve the directory over HTTP and remain online for the complete presentation:
 
-Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. 
-
-## What is difference between Python 2 and Python 3?
-
-| Basis of comparison	 | Python 3	          | Python 2      |
-| :---:                |     :---:          |          :---: |
-| Function print       | print ("hello")	  | print "hello" |
-| Division of Integers | Whenever two integers are divided, you get a float value	 | When two integers are divided, you always provide integer value |
-| Unicode              |     In Python 3, default storing of strings is Unicode    | To store Unicode string value, you require to define them with "u"  |
-| Syntax               |     The syntax is simpler and easily understandable       | The syntax of Python 2 was comparatively difficult to understand      |
-| Rules of ordering Comparisons  |     In this version, Rules of ordering comparisons have been simplified  |  Rules of ordering comparison are very complex |
-| Iteration            |  The new Range() function introduced to perform iterations |  In Python 2, the xrange() is used for iterations |
-| Exceptions           |     It should be enclosed in parenthesis          |          It should be enclosed in notations |
-| Leak of variables    |     The value of variables never changes          |          The value of the global variable will change while using it inside for-loop |
-| Backward compatibility                |     Not difficult to port python 2 to python 3 but it is never reliable          |          Python version 3 is not backwardly compatible with Python 2 |
-| Library                |     Many recent developers are creating libraries which you can only use with Python 3          |          Many recent developers are creating libraries which you can only use with Python 3.	Many older libraries created for Python 2 is not forward-compatible |
-
-## Python 2 vs. Python 3 Example Code
-
-> Python 3
-
-```
-// Python3.X
-
-def main():
-  print("Hello World!")
-  
-if __name__== "__main__":
-  main()
-```
-> Python2 
-
-```
-// Python2.X
-
-def main():
-  print "Hello World!"
-  
-if __name__== "__main__":
-  main()
+```bash
+git clone https://github.com/khlaifiabilel/python-course.git
+cd python-course
+python3 -m http.server 8000
 ```
 
-## Which Python Version to Use?
+Open <http://127.0.0.1:8000/>. The course pages are static; the `python3` command
+is only being used as a convenient local web server.
 
-When it comes to Python version 2 vs. 3 today, Python 3 is the outright winner. That's because Python 2 won't be available after 2020. Mass Python 3 adoption is the clear direction of the future.
+## Chatbot status
 
-After considering declining support for Python 2 programming language and added benefits from upgrades to Python 3, it is always advisable for a new developer to select Python version 3. However, if a job demands Python 2 capabilities, that would be an only compelling reason to use this version.
+The landing page includes a `<mybot>` widget implemented by
+`assets/js/script.js` and historical branding for API.AI, the predecessor of
+Dialogflow. There is no current Dialogflow agent configuration or secret in the
+repository. Treat the chatbot as legacy presentation code; it may not function
+against current services.
 
-## KEY DIFFERENCE
+## Pages and repository identity
 
-* Python 3 syntax is simpler and easily understandable whereas Python 2 syntax is comparatively difficult to understand.
-* Python 3 default storing of strings is Unicode whereas Python 2 stores need to define Unicode string value with "u."
-* Python 3 value of variables never changes whereas in Python 2 value of the global variable will be changed while using it inside for-loop.
-* Python 3 exceptions should be enclosed in parenthesis while Python 2 exceptions should be enclosed in notations.
-* Python 3 rules of ordering comparisons are simplified whereas Python 2 rules of ordering comparison are complex.
-* Python 3 offers Range() function to perform iterations whereas, In Python 2, the xrange() is used for iterations.
+GitHub Pages is built from the root of `master` at the published URL above. The
+older repository metadata and in-page ribbon still refer to the previous
+`KalifiaBillal/Introduction-to-Python-Programming-language` identity; the
+canonical repository is now `khlaifiabilel/python-course`. No Pages or
+repository rename is required to use the current URL.
 
-## How To Setup On Linux
+The committed Jekyll workflow also builds on pushes and pull requests to
+`master`, but it uses `actions/checkout@v2` and a floating
+`jekyll/builder:latest` container. That historical workflow should not be
+treated as a reproducible modern toolchain.
 
-Run the following commands as root or user with sudo access to update the packages list and install the prerequisites:
+## Verification
 
-```
-// Run
+There is no automated course-content test suite. Appropriate checks are:
 
-sudo apt update
-sudo apt install software-properties-common
+- open the landing page and each of the eight course links;
+- confirm local CSS, JavaScript, image, and font paths resolve;
+- navigate slides with keyboard controls and test at desktop/mobile widths;
+- review browser developer tools for failed third-party resources.
 
-```
+No student code is executed, graded, or submitted by this site.
 
-Add the deadsnakes PPA to your system’s sources list:
+## Provenance
 
-```
-// Run
+The repository history begins with an import by `kalifiabillal` on 2020-06-02,
+and the slide exports identify Kalifia Billal as author. The exported decks
+embed Reveal.js and other browser libraries with their retained copyright and
+license comments. External images and fonts remain hosted by their respective
+providers and are not original repository assets merely because they are
+referenced by a slide.
 
-sudo add-apt-repository ppa:deadsnakes/ppa
+## Known limitations
 
-```
-When prompted press Enter to continue:
+- Examples reflect the Python 3.8-era course and should be checked against a
+  currently supported Python release.
+- The chatbot integration is obsolete and unconfigured.
+- Many large slide dependencies are embedded in generated HTML, making the
+  source difficult to maintain by hand.
+- Availability and licensing of externally hosted media can change.
 
-```
-// Run
-Press [ENTER] to continue or Ctrl-c to cancel adding it.
+## License
 
-```
-Once the repository is enabled, install Python 3.8 with:
-
-```
-// Run
-sudo apt install python3.8
-
-```
-
-Verify that the installation was successful by typing:
-
-```
-// Run
-python3.8 --version
-Python 3.8.0
-
-
-```
-
-At this point, Python 3.8 is installed on your Ubuntu system, and you can start using it.
-
-## Python courses
-
-This is a complete Python Course: Go From Beginner To Expert , In this course you will learn from scratch. We will assume that you are a complete beginner and by the end of the course you will be at advanced level. This course contain Real-World examples and Hands On practicals. We will guide you step by step so that you can understand better. This course will allow you to work on the Real-World as a professional.
-
-## Intelligent assistant to learn Python
-
-## What is a ChatBot ?
-
-A chatbot is a software application used to conduct an on-line chat conversation via text or text-to-speech, in lieu of providing direct contact with a live human agent.
-
-## What a ChatBot can do ?
-
-It is an assistant that communicates with us through text messages, a virtual companion that integrates into websites, applications or instant messengers and helps entrepreneurs to get closer to customers. Such a bot is an automated system of communication with users.
-
-# FAQ
-
-- **How do I do *specifically* so and so?**
-    - No problem! Just do this.
-
-# Support
-
-Reach out to me at one of the following places!
-
-- Linkedin at <a href="https://www.linkedin.com/in/kalifiabillal/" target="_blank">`Kalifiabillal`</a>
-- Twitter at <a href="https://twitter.com/kalifiabillal" target="_blank">`@Kalifiabillal`</a>
-
-# License
-
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2020 © <a href="https://github.com/KalifiaBillal" target="_blank">Kalifiabillal</a>.
+No repository-level license file is present. The previous README's MIT claim
+was not backed by such a file and has been removed. Embedded Reveal.js and
+other third-party components retain their own notices, but those terms do not
+establish a license for the original course content as a whole.
