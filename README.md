@@ -5,6 +5,10 @@ with a legacy Dialogflow/API.AI chatbot shell on the landing page.
 
 **Published site:** <https://khlaifiabilel.github.io/python-course/>
 
+**Status:** Historical course material. The slide exports and legacy chatbot
+shell are retained as a reference, not maintained as a current Python
+curriculum or chatbot integration.
+
 ## Course material
 
 The exported HTML decks cover a progression from programming and Python basics
@@ -81,7 +85,7 @@ referenced by a slide.
 
 ## License
 
-No repository-level license file is present. The previous README's MIT claim
-was not backed by such a file and has been removed. Embedded Reveal.js and
-other third-party components retain their own notices, but those terms do not
-establish a license for the original course content as a whole.
+The root [`LICENSE`](LICENSE) applies the MIT License to repository material
+copyright Bilel Khlaifia. Embedded Reveal.js and other third-party components
+retain their own copyright and license notices; the repository-level license
+does not replace those terms.
